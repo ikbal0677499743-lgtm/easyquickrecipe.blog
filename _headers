@@ -1,0 +1,14 @@
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/recipes/*
+  X-Frame-Options: ALLOW-FROM https://www.pinterest.com
+  Content-Security-Policy: frame-ancestors 'self' https://www.pinterest.com https://pinterest.com
+
+/*.css
+  Cache-Control: public, max-age=31536000
+
+/*.js
+  Cache-Control: public, max-age=31536000

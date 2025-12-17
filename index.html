@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Quick Recipe - Simple Meals, Happy Family | Bella Baker</title>
+    
+    <!-- Pinterest Verification -->
+    <meta name="p:domain_verify" content="YOUR_PINTEREST_CODE">
+    
+    <!-- Open Graph / Pinterest -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://easyquickrecipe.blog/">
+    <meta property="og:title" content="Easy Quick Recipe - Simple Meals, Happy Family">
+    <meta property="og:description" content="Wholesome family recipes that come together fast. No fancy techniques, no hard-to-find ingredients - just real food for real families.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&h=630&fit=crop">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Easy Quick Recipe">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Easy Quick Recipe - Simple Meals, Happy Family">
+    <meta name="twitter:description" content="Wholesome family recipes that come together fast.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&h=630&fit=crop">
+    
+    <!-- Pinterest Rich Pin -->
+    <meta name="pinterest-rich-pin" content="true">
+    <meta property="og:rich_attachment" content="true">
+    
+    <!-- SEO -->
+    <meta name="description" content="Wholesome family recipes that come together fast. No fancy techniques, no hard-to-find ingredients - just real food for real families by Bella Baker.">
+    <meta name="keywords" content="easy recipes, quick meals, family dinner, simple cooking, weeknight recipes, comfort food">
+    <meta name="author" content="Bella Baker">
+    <link rel="canonical" href="https://easyquickrecipe.blog/">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Easy Quick Recipe",
+        "url": "https://easyquickrecipe.blog",
+        "description": "Wholesome family recipes that come together fast by Bella Baker.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Easy Quick Recipe",
+            "logo": {"@type": "ImageObject", "url": "https://easyquickrecipe.blog/images/logo.png"}
+        },
+        "author": {"@type": "Person", "name": "Bella Baker"}
+    }
+    </script>
+    
+    <style>
+        :root {
+            --amber: #F59E0B;
+            --amber-dark: #D97706;
+            --amber-light: #FCD34D;
+            --slate: #475569;
+            --slate-dark: #1E293B;
+            --slate-light: #64748B;
+            --warm-white: #FFFBEB;
+            --cream: #FEF3C7;
+            --gray-100: #F1F5F9;
+            --gray-600: #475569;
+            --gray-800: #1E293B;
+            --white: #FFFFFF;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.1);
+            --shadow-lg: 0 12px 40px rgba(0,0,0,0.15);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --radius-xl: 28px;
+            --radius-full: 9999px;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--warm-white);
+            color: var(--gray-800);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        a { color: var(--amber-dark); text-decoration: none; transition: all 0.2s ease; }
+        a:hover { color: var(--amber); }
+        
+        /* Header */
+        .header {
+            background: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--slate-dark);
+        }
+        
+        .logo-icon {
+            background: linear-gradient(135deg, var(--amber) 0%, var(--amber-light) 100%);
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 2px 8px rgba(245,158,11,0.3);
+        }
+        
+        .nav { display: flex; gap: 2.5rem; }
+        .nav a {
+            color: var(--slate);
+            font-weight: 500;
+            font-size: 0.95rem;
+            position: relative;
+        }
+        .nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--amber);
+            transition: width 0.3s ease;
+        }
+        .nav a:hover { color: var(--slate-dark); }
+        .nav a:hover::after { width: 100%; }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--slate-dark) 0%, var(--slate) 100%);
+            padding: 5rem 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop') center/cover;
+            opacity: 0.2;
+        }
+        
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+        
+        .hero-content h1 span {
+            color: var(--amber-light);
+        }
+        
+        .hero-content p {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--amber) 0%, var(--amber-dark) 100%);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(245,158,11,0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245,158,11,0.5);
+            color: var(--white);
+        }
+        
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: transparent;
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: var(--white);
+            color: var(--white);
+        }
+        
+        .hero-image {
+            position: relative;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .hero-stats {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--white);
+            padding: 1.25rem 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            display: flex;
+            gap: 2.5rem;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--amber-dark);
+        }
+        
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--slate-light);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        /* Features */
+        .features {
+            padding: 5rem 1.5rem 3rem;
+            background: var(--white);
+            margin-top: 2rem;
+        }
+        
+        .features-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 2rem 1rem;
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
+        }
+        
+        .feature:hover {
+            background: var(--warm-white);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--amber-light) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.75rem;
+        }
+        
+        .feature h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--slate-dark);
+        }
+        
+        .feature p {
+            font-size: 0.9rem;
+            color: var(--slate-light);
+        }
+        
+        /* Recipes Section */
+        .recipes-section {
+            padding: 4rem 1.5rem 5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-tag {
+            display: inline-block;
+            background: var(--cream);
+            color: var(--amber-dark);
+            padding: 0.5rem 1.25rem;
+            border-radius: var(--radius-full);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--slate-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--slate-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .recipes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .recipe-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+        
+        .recipe-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .recipe-card-image {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .recipe-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        
+        .recipe-card:hover .recipe-card-image img {
+            transform: scale(1.08);
+        }
+        
+        .recipe-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: var(--amber);
+            color: var(--white);
+            padding: 0.35rem 0.85rem;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .recipe-time {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: var(--white);
+            padding: 0.4rem 0.85rem;
+            border-radius: var(--radius-full);
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--slate-dark);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .recipe-card-content {
+            padding: 1.5rem;
+        }
+        
+        .recipe-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+        
+        .recipe-card h3 a { color: var(--slate-dark); }
+        .recipe-card h3 a:hover { color: var(--amber-dark); }
+        
+        .recipe-card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--slate-light);
+        }
+        
+        .recipe-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        .recipe-rating .stars { color: var(--amber); }
+        
+        /* Newsletter */
+        .newsletter {
+            background: var(--slate-dark);
+            padding: 4rem 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .newsletter::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="%23F59E0B" stroke-width="0.5" opacity="0.1"/></svg>') repeat;
+            background-size: 100px;
+        }
+        
+        .newsletter-content {
+            position: relative;
+            z-index: 1;
+            max-width: 550px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .newsletter h2 {
+            color: var(--white);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .newsletter p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 1.5rem;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            gap: 0.75rem;
+            background: var(--white);
+            padding: 0.5rem;
+            border-radius: var(--radius-full);
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.875rem 1.25rem;
+            border: none;
+            border-radius: var(--radius-full);
+            font-size: 1rem;
+            font-family: inherit;
+            background: transparent;
+        }
+        
+        .newsletter-form input:focus {
+            outline: none;
+        }
+        
+        .newsletter-form button {
+            background: linear-gradient(135deg, var(--amber) 0%, var(--amber-dark) 100%);
+            color: var(--white);
+            border: none;
+            padding: 0.875rem 1.75rem;
+            border-radius: var(--radius-full);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+        
+        .newsletter-form button:hover {
+            transform: scale(1.02);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--slate-dark);
+            color: var(--white);
+            padding: 4rem 1.5rem 2rem;
+        }
+        
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .footer-brand p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        
+        .footer-links h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--amber-light);
+        }
+        
+        .footer-links ul { list-style: none; }
+        .footer-links li { margin-bottom: 0.75rem; }
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem;
+        }
+        .footer-links a:hover { color: var(--amber); }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.5);
+        }
+        
+        .social-links { display: flex; gap: 1rem; }
+        .social-links a {
+            width: 42px;
+            height: 42px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        .social-links a:hover {
+            background: var(--amber);
+            transform: translateY(-2px);
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-inner { grid-template-columns: 1fr; text-align: center; }
+            .hero-image { display: none; }
+            .hero-buttons { justify-content: center; }
+            .features-inner { grid-template-columns: repeat(2, 1fr); }
+            .recipes-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (max-width: 768px) {
+            .header-inner { flex-direction: column; gap: 1rem; }
+            .nav { gap: 1.5rem; }
+            .hero { padding: 3rem 1.5rem; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .hero-stats { position: static; transform: none; margin-top: 2rem; justify-content: center; }
+            .features-inner { grid-template-columns: 1fr 1fr; gap: 1rem; }
+            .recipes-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+            .newsletter-form { flex-direction: column; border-radius: var(--radius-lg); }
+            .newsletter-form input { text-align: center; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+            .footer-bottom { flex-direction: column; gap: 1rem; }
+            .social-links { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" class="logo">
+                <span class="logo-icon">🍴</span>
+                <span>Easy Quick Recipe</span>
+            </a>
+            <nav class="nav">
+                <a href="/">Home</a>
+                <a href="/recipes/">Recipes</a>
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <h1>Simple Meals, <span>Happy Family</span></h1>
+                <p>Wholesome recipes that come together fast. No culinary degree required, no hard-to-find ingredients needed - just real food for real families, made with love by Bella Baker.</p>
+                <div class="hero-buttons">
+                    <a href="/recipes/" class="btn-primary">Explore Recipes →</a>
+                    <a href="/about/" class="btn-secondary">Meet Bella</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=420&fit=crop" alt="Delicious home cooked meal">
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-value">9</div>
+                        <div class="stat-label">Recipes</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">40min</div>
+                        <div class="stat-label">Or Less</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">5★</div>
+                        <div class="stat-label">Rated</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features -->
+    <section class="features">
+        <div class="features-inner">
+            <div class="feature">
+                <div class="feature-icon">🕐</div>
+                <h3>Quick & Simple</h3>
+                <p>40 minutes max, start to finish</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🛒</div>
+                <h3>Easy Ingredients</h3>
+                <p>Items from your regular grocery store</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">👨‍👩‍👧‍👦</div>
+                <h3>Family Approved</h3>
+                <p>Tested on real picky eaters</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📝</div>
+                <h3>Clear Steps</h3>
+                <p>Easy instructions anyone can follow</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Recipes -->
+    <section class="recipes-section">
+        <div class="section-header">
+            <span class="section-tag">Featured Recipes</span>
+            <h2>Family Favorites</h2>
+            <p>These tried-and-true recipes have earned a permanent spot in our weekly rotation. Simple, satisfying, and always delicious.</p>
+        </div>
+        
+        <div class="recipes-grid">
+            <article class="recipe-card">
+                <div class="recipe-card-image">
+                    <a href="/recipes/crispy-parmesan-chicken/"><img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=400&h=300&fit=crop" alt="Crispy Parmesan Chicken" loading="lazy"></a>
+                    <span class="recipe-badge">Popular</span>
+                    <span class="recipe-time">30 min</span>
+                </div>
+                <div class="recipe-card-content">
+                    <h3><a href="/recipes/crispy-parmesan-chicken/">Crispy Parmesan Crusted Chicken</a></h3>
+                    <div class="recipe-card-meta">
+                        <span>4 servings</span>
+                        <div class="recipe-rating"><span class="stars">★★★★★</span> 4.9</div>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="recipe-card">
+                <div class="recipe-card-image">
+                    <a href="/recipes/one-pot-pasta-primavera/"><img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=400&h=300&fit=crop" alt="One Pot Pasta Primavera" loading="lazy"></a>
+                    <span class="recipe-time">25 min</span>
+                </div>
+                <div class="recipe-card-content">
+                    <h3><a href="/recipes/one-pot-pasta-primavera/">One Pot Pasta Primavera</a></h3>
+                    <div class="recipe-card-meta">
+                        <span>6 servings</span>
+                        <div class="recipe-rating"><span class="stars">★★★★★</span> 4.8</div>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="recipe-card">
+                <div class="recipe-card-image">
+                    <a href="/recipes/honey-soy-glazed-pork/"><img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=400&h=300&fit=crop" alt="Honey Soy Glazed Pork" loading="lazy"></a>
+                    <span class="recipe-time">35 min</span>
+                </div>
+                <div class="recipe-card-content">
+                    <h3><a href="/recipes/honey-soy-glazed-pork/">Honey Soy Glazed Pork Chops</a></h3>
+                    <div class="recipe-card-meta">
+                        <span>4 servings</span>
+                        <div class="recipe-rating"><span class="stars">★★★★★</span> 4.9</div>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="recipe-card">
+                <div class="recipe-card-image">
+                    <a href="/recipes/loaded-baked-potato-soup/"><img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&h=300&fit=crop" alt="Loaded Baked Potato Soup" loading="lazy"></a>
+                    <span class="recipe-badge">Comfort Food</span>
+                    <span class="recipe-time">40 min</span>
+                </div>
+                <div class="recipe-card-content">
+                    <h3><a href="/recipes/loaded-baked-potato-soup/">Loaded Baked Potato Soup</a></h3>
+                    <div class="recipe-card-meta">
+                        <span>6 servings</span>
+                        <div class="recipe-rating"><span class="stars">★★★★★</span> 4.8</div>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="recipe-card">
+                <div class="recipe-card-image">
+                    <a href="/recipes/bbq-chicken-quesadillas/"><img src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=400&h=300&fit=crop" alt="BBQ Chicken Quesadillas" loading="lazy"></a>
+                    <span class="recipe-time">20 min</span>
+                </div>
+                <div class="recipe-card-content">
+                    <h3><a href="/recipes/bbq-chicken-quesadillas/">BBQ Chicken Quesadillas</a></h3>
+                    <div class="recipe-card-meta">
+                        <span>4 servings</span>
+                        <div class="recipe-rating"><span class="stars">★★★★★</span> 4.7</div>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="recipe-card">
+                <div class="recipe-card-image">
+                    <a href="/recipes/mediterranean-shrimp-skillet/"><img src="https://images.unsplash.com/photo-1559737558-2f5a35f4523b?w=400&h=300&fit=crop" alt="Mediterranean Shrimp Skillet" loading="lazy"></a>
+                    <span class="recipe-time">25 min</span>
+                </div>
+                <div class="recipe-card-content">
+                    <h3><a href="/recipes/mediterranean-shrimp-skillet/">Mediterranean Shrimp Skillet</a></h3>
+                    <div class="recipe-card-meta">
+                        <span>4 servings</span>
+                        <div class="recipe-rating"><span class="stars">★★★★★</span> 4.9</div>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="recipe-card">
+                <div class="recipe-card-image">
+                    <a href="/recipes/maple-dijon-salmon/"><img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&h=300&fit=crop" alt="Maple Dijon Salmon" loading="lazy"></a>
+                    <span class="recipe-badge">Healthy</span>
+                    <span class="recipe-time">25 min</span>
+                </div>
+                <div class="recipe-card-content">
+                    <h3><a href="/recipes/maple-dijon-salmon/">Maple Dijon Glazed Salmon</a></h3>
+                    <div class="recipe-card-meta">
+                        <span>4 servings</span>
+                        <div class="recipe-rating"><span class="stars">★★★★★</span> 4.8</div>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="recipe-card">
+                <div class="recipe-card-image">
+                    <a href="/recipes/skillet-lasagna/"><img src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400&h=300&fit=crop" alt="Skillet Lasagna" loading="lazy"></a>
+                    <span class="recipe-time">35 min</span>
+                </div>
+                <div class="recipe-card-content">
+                    <h3><a href="/recipes/skillet-lasagna/">Easy Skillet Lasagna</a></h3>
+                    <div class="recipe-card-meta">
+                        <span>6 servings</span>
+                        <div class="recipe-rating"><span class="stars">★★★★★</span> 4.9</div>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="recipe-card">
+                <div class="recipe-card-image">
+                    <a href="/recipes/thai-peanut-noodles/"><img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&h=300&fit=crop" alt="Thai Peanut Noodles" loading="lazy"></a>
+                    <span class="recipe-time">20 min</span>
+                </div>
+                <div class="recipe-card-content">
+                    <h3><a href="/recipes/thai-peanut-noodles/">15-Minute Thai Peanut Noodles</a></h3>
+                    <div class="recipe-card-meta">
+                        <span>4 servings</span>
+                        <div class="recipe-rating"><span class="stars">★★★★★</span> 4.8</div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+    
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Get Recipes in Your Inbox</h2>
+            <p>Join 15,000+ home cooks getting new recipes and kitchen tips every week.</p>
+            <form class="newsletter-form" action="#" method="POST">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>🍴 Easy Quick Recipe</h3>
+                    <p>Simple, wholesome recipes for busy families. Created with love by Bella Baker in Austin, Texas.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Recipes</h4>
+                    <ul>
+                        <li><a href="/recipes/">All Recipes</a></li>
+                        <li><a href="/recipes/crispy-parmesan-chicken/">Parmesan Chicken</a></li>
+                        <li><a href="/recipes/one-pot-pasta-primavera/">Pasta Primavera</a></li>
+                        <li><a href="/recipes/skillet-lasagna/">Skillet Lasagna</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="/about/">About Bella</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                        <li><a href="/privacy/">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://www.pinterest.com/bellabaker0782/" target="_blank" rel="noopener">Pinterest</a></li>
+                        <li><a href="https://instagram.com/easyquickrecipe" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a href="https://facebook.com/easyquickrecipe" target="_blank" rel="noopener">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Easy Quick Recipe. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://www.pinterest.com/bellabaker0782/" target="_blank" rel="noopener" aria-label="Pinterest">📌</a>
+                    <a href="https://instagram.com/easyquickrecipe" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+                    <a href="https://facebook.com/easyquickrecipe" target="_blank" rel="noopener" aria-label="Facebook">👤</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

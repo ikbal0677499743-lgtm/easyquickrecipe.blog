@@ -1,0 +1,17 @@
+# Robots.txt for easyquickrecipe.blog
+# Pinterest-optimized for Rich Pins
+
+User-agent: *
+Allow: /
+
+User-agent: Pinterest
+Allow: /
+Crawl-delay: 1
+
+User-agent: Pinterestbot
+Allow: /
+
+Sitemap: https://easyquickrecipe.blog/sitemap.xml
+
+Disallow: /api/
+Disallow: /_*
